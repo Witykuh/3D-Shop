@@ -196,11 +196,15 @@ h1, h2, h3, h4 {
   border-color: rgba(225, 29, 46, 0.5);
   box-shadow: var(--shadow);
 }
+.card:hover img {
+  transform: scale(1.08);
+}
 .card img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   background: #000;
+  transition: transform 0.3s ease;
 }
 .card-body { padding: 16px 18px 20px; }
 .card h4 { font-size: 18px; margin-bottom: 6px; }
