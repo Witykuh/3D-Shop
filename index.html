@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>SSHINOBI · Impresión 3D en la resi</title>
+  <meta name="description" content="Impresión 3D rápida y cercana dentro de la residencia. Catálogo, encargos personalizados y multicolor." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="brand">SSHINOBI</a>
+    <nav class="nav-links">
+      <a href="#colores" class="nav-link">Colores</a>
+      <a href="#catalogo" class="nav-link">Catálogo</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <span class="badge">● Activo en la resi</span>
+      <h1>Impresión 3D <span class="accent">rápida</span> dentro de la resi.</h1>
+      <p class="lead">
+        Pide modelos ya preparados o encarga algo personalizado.
+        Sin esperas largas, sin envíos: lo recoges en mano.
+      </p>
+
+      <div class="cta-row">
+        <!-- CAMBIA EL NÚMERO DE WHATSAPP AQUÍ (formato internacional, sin +) -->
+        <a class="btn btn-primary" href="https://wa.me/34600000000?text=Hola%20SSHINOBI,%20quiero%20info" target="_blank" rel="noopener">
+          Pedir por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#catalogo">Ver catálogo ↓</a>
+      </div>
+
+      <ul class="mini">
+        <li>⚡ Entrega en mano</li>
+        <li>🎨 Multicolor disponible</li>
+        <li>🛠️ Encargos personalizados</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ COLORES DISPONIBLES ============
+       Para editar: cambia data-color, el nombre y la clase de estado
+       Estados: status-ok | status-low | status-out
+  -->
+  <section class="section" id="colores">
+    <div class="section-head">
+      <h2>Colores disponibles</h2>
+      <p>Stock actual de filamentos. Se actualiza a mano.</p>
+    </div>
+
+    <div class="colors">
+      <div class="color">
+        <span class="swatch" style="--c:#e11d2e"></span>
+        <div class="color-info">
+          <strong>Rojo</strong>
+          <span class="status status-ok">Disponible</span>
+        </div>
+      </div>
+      <div class="color">
+        <span class="swatch" style="--c:#0a0a0a; border-color:#333"></span>
+        <div class="color-info">
+          <strong>Negro</strong>
+          <span class="status status-ok">Disponible</span>
+        </div>
+      </div>
+      <div class="color">
+        <span class="swatch" style="--c:#ffffff; border-color:#333"></span>
+        <div class="color-info">
+          <strong>Blanco</strong>
+          <span class="status status-low">Queda poco</span>
+        </div>
+      </div>
+      <div class="color">
+        <span class="swatch" style="--c:#1f6feb"></span>
+        <div class="color-info">
+          <strong>Azul</strong>
+          <span class="status status-ok">Disponible</span>
+        </div>
+      </div>
+      <div class="color">
+        <span class="swatch" style="--c:#22c55e"></span>
+        <div class="color-info">
+          <strong>Verde</strong>
+          <span class="status status-low">Queda poco</span>
+        </div>
+      </div>
+      <div class="color">
+        <span class="swatch" style="--c:#f5c518"></span>
+        <div class="color-info">
+          <strong>Amarillo</strong>
+          <span class="status status-out">Agotado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FRANJA MULTICOLOR ============ -->
+  <section class="multicolor">
+    <div class="multicolor-inner">
+      <div class="multicolor-icon" aria-hidden="true">🎨</div>
+      <div>
+        <h3>Impresión multicolor disponible</h3>
+        <p>
+          Sí, puedo hacer piezas multicolor. <strong>No aplica a todos los modelos</strong>,
+          tarda más tiempo, genera algo más de desperdicio y por eso suele ser un poco más cara.
+          Pregunta antes y vemos si tu pieza se puede hacer así.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATÁLOGO ============
+       Para añadir un producto:
+       1. Copia un bloque <article class="card">...</article>
+       2. Cambia imagen, nombre, descripción, tiempo, precio
+       3. En .card-extra edita los detalles desplegables
+  -->
+  <main id="catalogo">
+
+    <h3 class="cat">Útiles para escritorio</h3>
+    <div class="grid">
+
+      <article class="card">
+        <button class="card-toggle" aria-expanded="false">
+          <div class="card-img"><img src="/images/organizador.jpg" alt="Organizador de escritorio" loading="lazy" /></div>
+          <div class="card-body">
+            <h4>Organizador modular</h4>
+            <p>Mantén bolis, cables y notas en su sitio.</p>
+            <div class="meta">
+              <span>⏱ 4-6 h</span>
+              <span class="price">desde 6 €</span>
+            </div>
+            <span class="more-hint">Toca para más detalles ▾</span>
+          </div>
+        </button>
+        <div class="card-extra" hidden>
+          <ul>
+            <li><strong>Colores recomendados:</strong> negro, blanco, rojo</li>
+            <li><strong>Tamaño:</strong> 12 × 8 × 5 cm aprox.</li>
+            <li><strong>Multicolor:</strong> sí, opcional</li>
+            <li><strong>Uso:</strong> ideal para mesa de estudio</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="card-toggle" aria-expanded="false">
+          <div class="card-img"><img src="/images/soporte-movil.jpg" alt="Soporte de móvil" loading="lazy" /></div>
+          <div class="card-body">
+            <h4>Soporte de móvil</h4>
+            <p>Ángulo cómodo para ver clases o vídeos.</p>
+            <div class="meta">
+              <span>⏱ 2-3 h</span>
+              <span class="price">desde 4 €</span>
+            </div>
+            <span class="more-hint">Toca para más detalles ▾</span>
+          </div>
+        </button>
+        <div class="card-extra" hidden>
+          <ul>
+            <li><strong>Compatible:</strong> casi cualquier móvil</li>
+            <li><strong>Multicolor:</strong> no recomendado (pieza pequeña)</li>
+            <li><strong>Notas:</strong> ideal para escritorio o mesilla</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="card-toggle" aria-expanded="false">
+          <div class="card-img"><img src="/images/clips-cables.jpg" alt="Clips para cables" loading="lazy" /></div>
+          <div class="card-body">
+            <h4>Clips para cables</h4>
+            <p>Pack de 4. Adiós al lío detrás de la mesa.</p>
+            <div class="meta">
+              <span>⏱ 1-2 h</span>
+              <span class="price">desde 3 €</span>
+            </div>
+            <span class="more-hint">Toca para más detalles ▾</span>
+          </div>
+        </button>
+        <div class="card-extra" hidden>
+          <ul>
+            <li><strong>Incluye:</strong> 4 unidades</li>
+            <li><strong>Adhesivo:</strong> doble cara incluido</li>
+            <li><strong>Multicolor:</strong> no</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+    <h3 class="cat">Decoración</h3>
+    <div class="grid">
+
+      <article class="card">
+        <button class="card-toggle" aria-expanded="false">
+          <div class="card-img"><img src="/images/maceta.jpg" alt="Mini maceta geométrica" loading="lazy" /></div>
+          <div class="card-body">
+            <h4>Mini maceta geométrica</h4>
+            <p>Para suculentas o cactus pequeños.</p>
+            <div class="meta">
+              <span>⏱ 5-7 h</span>
+              <span class="price">desde 7 €</span>
+            </div>
+            <span class="more-hint">Toca para más detalles ▾</span>
+          </div>
+        </button>
+        <div class="card-extra" hidden>
+          <ul>
+            <li><strong>Tamaño:</strong> 7 × 7 × 7 cm</li>
+            <li><strong>Multicolor:</strong> sí, queda muy bien</li>
+            <li><strong>Notas:</strong> no recomendado para riego directo, usa maceta interior</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <button class="card-toggle" aria-expanded="false">
+          <div class="card-img"><img src="/images/colgador.jpg" alt="Colgador de pared" loading="lazy" /></div>
+          <div class="card-body">
+            <h4>Colgador de pared</h4>
+            <p>Para llaves, auriculares o gorra.</p>
+            <div class="meta">
+              <span>⏱ 3-4 h</span>
+              <span class="price">desde 5 €</span>
+            </div>
+            <span class="more-hint">Toca para más detalles ▾</span>
+          </div>
+        </button>
+        <div class="card-extra" hidden>
+          <ul>
+            <li><strong>Fijación:</strong> adhesivo o tornillo</li>
+            <li><strong>Carga máx:</strong> ~1,5 kg</li>
+            <li><strong>Multicolor:</strong> sí</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+    <h3 class="cat">Accesorios y personalizados</h3>
+    <div class="grid">
+
+      <article class="card">
+        <button class="card-toggle" aria-expanded="false">
+          <div class="card-img"><img src="/images/llavero.jpg" alt="Llavero personalizado" loading="lazy" /></div>
+          <div class="card-body">
+            <h4>Llavero personalizado</h4>
+            <p>Con tu nombre, inicial o logo.</p>
+            <div class="meta">
+              <span>⏱ 1 h</span>
+              <span class="price">desde 3 €</span>
+            </div>
+            <span class="more-hint">Toca para más detalles ▾</span>
+          </div>
+        </button>
+        <div class="card-extra" hidden>
+          <ul>
+            <li><strong>Personalizable:</strong> texto o forma</li>
+            <li><strong>Multicolor:</strong> sí, ideal para texto</li>
+            <li><strong>Notas:</strong> regalo perfecto y barato</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- ============ ENCARGOS PERSONALIZADOS ============ -->
+  <section class="custom section">
+    <div class="custom-inner">
+      <span class="badge">Encargos a medida</span>
+      <h2>¿Tienes una idea propia?</h2>
+      <p>
+        Puedo imprimir piezas concretas, regalos, accesorios, decoración o lo que se te ocurra.
+        Mándame una foto, un boceto o una referencia y vemos cómo hacerlo.
+      </p>
+      <a class="btn btn-primary big" href="https://wa.me/34600000000?text=Hola,%20quiero%20un%20encargo%20personalizado" target="_blank" rel="noopener">
+        Hablar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ QUIÉN SOY ============
+       Cambia el texto, la foto/vídeo y el enlace de LinkedIn aquí
+  -->
+  <section class="section about">
+    <div class="section-head">
+      <h2>Quién está detrás</h2>
+      <p>Pequeño proyecto, hecho desde la habitación.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-media">
+        <!-- Sustituye por tu foto o vídeo del mini estudio -->
+        <img src="/images/organizador.jpg" alt="Mini estudio en la habitación" loading="lazy" />
+      </div>
+      <div class="about-text">
+        <p>
+          Soy estudiante en la residencia y monté un mini setup de impresión 3D en mi habitación.
+          Empezó como hobby y ahora ayudo a quien quiera una pieza concreta sin tener que pedirla online ni esperar días.
+        </p>
+        <p>
+          Trato cercano, precios de estudiante y todo en mano. Si tienes una idea, escríbeme y la vemos.
+        </p>
+        <!-- Cambia el enlace por el tuyo si quieres mostrarlo -->
+        <a class="link-inline" href="#" target="_blank" rel="noopener">Ver LinkedIn →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACTO ============ -->
+  <section class="section contact" id="contacto">
+    <h2>Pídelo por WhatsApp</h2>
+    <p>Respondo rápido entre clases. Sin compromiso.</p>
+    <a class="btn btn-primary big" href="https://wa.me/34600000000?text=Hola%20SSHINOBI" target="_blank" rel="noopener">
+      Abrir WhatsApp
+    </a>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div>SSHINOBI · Impresión 3D en la resi</div>
+    <div class="muted">Consulta disponibilidad y precios por WhatsApp</div>
+  </footer>
+
+  <!-- ============ FAB WHATSAPP ============ -->
+  <a class="fab" href="https://wa.me/34600000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.52 3.48A11.86 11.86 0 0012.05 0C5.5 0 .2 5.3.2 11.86c0 2.09.55 4.13 1.6 5.93L0 24l6.36-1.66a11.83 11.83 0 005.69 1.45h.01c6.55 0 11.86-5.3 11.86-11.86 0-3.17-1.23-6.15-3.4-8.45zM12.06 21.5h-.01a9.6 9.6 0 01-4.89-1.34l-.35-.21-3.77.99 1-3.67-.23-.38a9.62 9.62 0 1117.85-5.03c0 5.31-4.32 9.64-9.6 9.64zm5.27-7.21c-.29-.14-1.71-.84-1.97-.94-.27-.1-.46-.14-.66.14-.19.29-.76.94-.93 1.13-.17.19-.34.22-.63.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.59-.9-2.18-.24-.57-.48-.49-.66-.5l-.56-.01c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.45 0 1.45 1.05 2.85 1.2 3.05.14.19 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.62.7.22 1.34.19 1.84.12.56-.08 1.71-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/>
+    </svg>
+  </a>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
