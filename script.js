@@ -33,4 +33,39 @@
       filamentToggle.textContent = open ? "Ver guía ▼" : "Ocultar guía ▲";
     });
   }
+  const sliders = document.querySelectorAll("[data-slider]");
+
+    sliders.forEach((slider) => {
+      const images = slider.querySelectorAll(".slider-image");
+      const prev = slider.querySelector("[data-prev]");
+      const next = slider.querySelector("[data-next]");
+
+      if (images.length <= 1) {
+        if (prev) prev.style.display = "none";
+        if (next) next.style.display = "none";
+        return;
+      }
+
+      let current = 0;
+
+      function showImage(index) {
+        images.forEach((img, i) => {
+          img.classList.toggle("active", i === index);
+        });
+      }
+
+      prev?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        current = (current - 1 + images.length) % images.length;
+        showImage(current);
+      });
+
+      next?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        current = (current + 1) % images.length;
+        showImage(current);
+      });
+
+      showImage(current);
+});
 })();

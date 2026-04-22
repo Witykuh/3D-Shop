@@ -100,8 +100,17 @@
       </article>
 
       <article class="card">
-        <button class="card-toggle" aria-expanded="false">
-          <div class="card-img"><img src="images/soporte.jpg" alt="Soporte de móvil" loading="lazy" /></div>
+        <div class="card-img slider" data-slider>
+          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
+
+            <img src="images/soporte.jpg" alt="Soporte de móvil" loading="lazy" class="slider-image active" />
+            <img src="images/soporte-2.jpg" alt="Soporte de móvil modelo 2" loading="lazy" class="slider-image" />
+            <img src="images/soporte-3.jpg" alt="Soporte de móvil modelo 3" loading="lazy" class="slider-image" />
+
+          <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
+        </div>
+
+        <button class="card-toggle" aria-expanded="false" type="button">
           <div class="card-body">
             <h4>Soporte de móvil</h4>
             <p>Ángulo cómodo para ver clases o vídeos.</p>
@@ -112,6 +121,7 @@
             <span class="more-hint">Toca para más detalles ▾</span>
           </div>
         </button>
+
         <div class="card-extra" hidden>
           <ul>
             <li><strong>Compatible:</strong> casi cualquier móvil</li>
@@ -347,7 +357,7 @@
         <li>Fácil de imprimir y buen acabado</li>
         <li>Puede ser básico, mate o con acabados especiales</li>
         <li>También puede existir glow, translúcido o variantes decorativas</li>
-        <li>No aguanta bien calor alto ni esfuerzos fuertes</li>
+        <li>No aguanta bien calor alto ni esfuerzos fuertes ni agua</li>
       </ul>
     </article>
 
@@ -358,7 +368,7 @@
         <li>Más resistente y algo más flexible</li>
         <li>Mejor para piezas prácticas</li>
         <li>Buen equilibrio entre resistencia y facilidad</li>
-        <li>Lo tengo para probar y para usos concretos</li>
+        <li>No dispongo de mucho :)</li>
       </ul>
     </article>
 
