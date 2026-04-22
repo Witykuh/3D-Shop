@@ -489,6 +489,10 @@ h1, h2, h3, h4 {
   margin-top: 18px;
 }
 
+.filament-grid[hidden] {
+  display: none !important;
+}
+
 .filament-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
