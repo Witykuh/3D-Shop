@@ -21,4 +21,16 @@
       }
     });
   });
+  const filamentToggle = document.querySelector(".filament-toggle");
+  const filamentGrid = document.querySelector(".filament-grid");
+
+  if (filamentToggle && filamentGrid) {
+    filamentToggle.addEventListener("click", () => {
+      const open = filamentToggle.getAttribute("aria-expanded") === "true";
+
+      filamentToggle.setAttribute("aria-expanded", String(!open));
+      filamentGrid.hidden = open;
+      filamentToggle.textContent = open ? "Ver guía ▼" : "Ocultar guía ▲";
+    });
+  }
 })();
