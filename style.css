@@ -70,6 +70,22 @@ h1, h2, h3, h4 {
 }
 .nav-link:hover { color: var(--text); border-color: var(--red); }
 
+/* Responsive brand text */
+.brand .full,
+.brand .short {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .brand .full { display: none; }
+  .brand .short { display: inline; }
+}
+
+@media (min-width: 769px) {
+  .brand .full { display: inline; }
+  .brand .short { display: none; }
+}
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
