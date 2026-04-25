@@ -369,6 +369,36 @@ h1, h2, h3, h4 {
 }
 .card-extra strong { color: var(--text); font-weight: 600; }
 
+/* ---------- PACKS ---------- */
+.card-pack {
+  position: relative;
+}
+
+.badge-pack {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--yellow);
+  color: #000;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.price-discount {
+  color: var(--green);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.price-discount s {
+  color: var(--muted);
+  font-weight: 400;
+  margin-right: 4px;
+}
+
 /* ---------- CUSTOM ---------- */
 .custom {
   background: linear-gradient(135deg, rgba(225, 29, 46, 0.12), transparent 70%), var(--bg-elev);
