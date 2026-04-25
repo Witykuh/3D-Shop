@@ -42,14 +42,33 @@ h1, h2, h3, h4 {
 /* ---------- NAV ---------- */
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 16px 20px 8px;
   max-width: var(--maxw);
   margin: 0 auto;
-  gap: 12px;
+  gap: 10px;
 }
-.nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (min-width: 769px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+  .nav-links {
+    justify-content: flex-end;
+  }
+}
+
 .brand {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 700;
@@ -69,22 +88,6 @@ h1, h2, h3, h4 {
   transition: all .2s;
 }
 .nav-link:hover { color: var(--text); border-color: var(--red); }
-
-/* Responsive brand text */
-.brand .full,
-.brand .short {
-  display: inline;
-}
-
-@media (max-width: 768px) {
-  .brand .full { display: none; }
-  .brand .short { display: inline; }
-}
-
-@media (min-width: 769px) {
-  .brand .full { display: inline; }
-  .brand .short { display: none; }
-}
 
 /* ---------- HERO ---------- */
 .hero {
