@@ -1081,3 +1081,12 @@ body { font-size: 0.95rem; }
 @media (min-width: 768px) {
   .hide-mobile { display: block; }
 }
+.hero-page {
+  min-height: auto !important;
+}
+@media (min-width: 768px) {
+  .hero-page {
+    min-height: auto !important;
+    padding: 48px 0 !important;
+  }
+}
