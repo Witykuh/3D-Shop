@@ -93,6 +93,7 @@ body { font-size: 0.95rem; }
 
 /* ---------- NAV ---------- */
 .nav {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -202,6 +203,11 @@ body { font-size: 0.95rem; }
   transition: all .2s;
 }
 .nav-link:hover { color: var(--text); border-color: var(--red); }
+.nav-link.active {
+  color: var(--text);
+  border-color: var(--red);
+  background: rgba(225, 29, 46, 0.08);
+}
 
 /* ---------- HERO ---------- */
 .hero {

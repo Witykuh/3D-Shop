@@ -5,20 +5,29 @@
 (function () {
   // Hamburger menu
   const hamburger = document.getElementById('hamburger');
-  const navLinksMobile = document.getElementById('nav-links-mobile');
+  const navMobile = document.getElementById('nav-links-mobile');
 
-  if (hamburger && navLinksMobile) {
-    hamburger.addEventListener('click', () => {
+  if (hamburger && navMobile) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
       hamburger.classList.toggle('open');
-      navLinksMobile.classList.toggle('open');
+      navMobile.classList.toggle('open');
     });
 
-    // Close menu when clicking a link
-    navLinksMobile.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
+    // Cerrar al pulsar un link
+    navMobile.querySelectorAll('.nav-link').forEach(function(link) {
+      link.addEventListener('click', function() {
         hamburger.classList.remove('open');
-        navLinksMobile.classList.remove('open');
+        navMobile.classList.remove('open');
       });
+    });
+
+    // Cerrar al pulsar fuera
+    document.addEventListener('click', function(e) {
+      if (!hamburger.contains(e.target) && !navMobile.contains(e.target)) {
+        hamburger.classList.remove('open');
+        navMobile.classList.remove('open');
+      }
     });
   }
 
