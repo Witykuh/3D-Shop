@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0a0a0a" />
   <title>SSHINOBI · Impresión 3D en la resi</title>
-  <meta name="description" content="Impresión 3D rápida y cercana dentro de la residencia. Catálogo, encargos personalizados y multicolor." />
+  <meta name="description" content="Impresión 3D rápida y cercana dentro de la residencia. Catálogo permanente, drops exclusivos y encargos personalizados." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,10 +17,22 @@
 
   <!-- ============ NAV ============ -->
   <header class="nav">
-    <a href="#top" class="brand">SSHINOBI x SOTO HOUSE</a>
+    <a href="index.html" class="brand">SSHINOBI x SOTO HOUSE</a>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <nav class="nav-links">
-      <a href="#colores" class="nav-link">Colores</a>
-      <a href="#catalogo" class="nav-link">Catálogo</a>
+      <a href="catalogo.html" class="nav-link">Catálogo</a>
+      <a href="drops.html" class="nav-link">Drops</a>
+      <a href="catalogo.html#colores" class="nav-link">Colores</a>
+      <a href="#contacto" class="nav-link">Contacto</a>
+    </nav>
+    <nav class="nav-links mobile" id="nav-links-mobile">
+      <a href="catalogo.html" class="nav-link">Catálogo</a>
+      <a href="drops.html" class="nav-link">Drops</a>
+      <a href="catalogo.html#colores" class="nav-link">Colores</a>
       <a href="#contacto" class="nav-link">Contacto</a>
     </nav>
   </header>
@@ -31,796 +43,74 @@
       <span class="badge">● Activo en la resi</span>
       <h1>Impresión 3D <span class="accent">rápida</span> dentro de la resi.</h1>
       <p class="lead">
-        Pide modelos ya preparados o encarga algo personalizado.
+        Pide modelos ya preparados, colaboraciones exclusivas o encarga algo personalizado.
         Sin esperas largas, sin envíos: lo recoges en mano.
       </p>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/34636653986?text=Holaa,%20quiero%20info" target="_blank" rel="noopener">
+        <a class="btn btn-ghost" href="https://wa.me/34636653986?text=Holaa%20%F0%9F%91%8B%20Antes%20de%20nada%2C%20%C2%BFpodr%C3%ADas%20presentarte%3F%20As%C3%AD%20puedo%20guardarte%20y%20saber%20con%20qui%C3%A9n%20hablo%20por%20si%20haces%20alg%C3%BAn%20pedido.%20Gracias%20%F0%9F%98%8A" target="_blank" rel="noopener">
           Pedir por WhatsApp
         </a>
-        <a class="btn btn-ghost" href="#catalogo">Ver catálogo ↓</a>
+        <a class="btn btn-drop" href="catalogo.html">Ver catálogo</a>
       </div>
 
       <ul class="mini">
         <li>⚡ Entrega en mano</li>
-        <li>🎨 Multicolor disponible</li>
         <li>🛠️ Encargos personalizados</li>
       </ul>
     </div>
-  </section>
-
-  <!-- ============ FRANJA MULTICOLOR ============ -->
-  <section class="multicolor">
-    <div class="multicolor-inner">
-      <div class="multicolor-icon" aria-hidden="true">🎨</div>
-      <div>
-        <h3>Impresión multicolor disponible</h3>
-        <p>
-          Sí, puedo hacer piezas multicolor. <strong>No aplica a todos los modelos</strong>,
-          tarda más tiempo, genera algo más de desperdicio y por eso suele ser un poco más cara.
-          Pregunta antes y vemos si tu pieza se puede hacer así.
-        </p>
+    <div class="hero-visual">
+      <!-- Aquí iría la imagen o elemento visual -->
+      <div class="hero-placeholder">
+        <div class="hero-icon">🖨️</div>
+        <p>Impresión 3D profesional</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ CATÁLOGO ============
-       Para añadir un producto:
-       1. Copia un bloque <article class="card">...</article>
-       2. Cambiar imagen, nombre, descripción, tiempo, precio
-       3. En .card-extra edita los detalles desplegables
-  -->
-
-  <main id="catalogo">
-
-<!--   ============ UTILIDAD Y ORGANIZACION ============ -->
-
-    <h3 class="cat">Utilidad y organización</h3>
-    <div class="grid">
-<!--   ============ PRODUCTO 1 ============ -->
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/soportelibro-1.jpg" alt="Soporte de libro" loading="lazy" class="slider-image active" />
-            <img src="images/soportelibro-2.jpeg" alt="Soporte de libro modelo 2" loading="lazy" class="slider-image" />
-
-          <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Soporte para libro</h4>
-            <p>Lee sin complicaciones.</p>
-            <div class="meta">
-              <span>⏱ 1 h</span>
-              <span class="price">desde 3 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Colores recomendados:</strong> Negro, blanco</li>
-            <li><strong>Multicolor:</strong> No recomendado</li>
-          </ul>
-        </div>
-      </article>
-<!--   ============ PRODUCTO 2 ============ -->
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/soportemovil-1.jpg" alt="Soporte de móvil" loading="lazy" class="slider-image active" />
-            <img src="images/soportemovil-2.jpg" alt="Soporte de móvil modelo 2" loading="lazy" class="slider-image" />
-            <img src="images/soportemovil-3.jpg" alt="Soporte de móvil modelo 3" loading="lazy" class="slider-image" />
-
-          <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Soporte para móvil</h4>
-            <p>Diferentes modelos, diferentes oportunidades.</p>
-            <div class="meta">
-              <span>⏱ 2-4 h</span>
-              <span class="price">desde 5 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Compatible:</strong> Cualquier móvil</li>
-            <li><strong>Multicolor:</strong> Depende del modelo</li>
-            <li><strong>Notas:</strong> Depende del modelo, el precio es mayor</li>
-          </ul>
-        </div>
-      </article>
-<!--   ============ PRODUCTO 3 ============ -->
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/pinky-4.jpg" alt="Soporte de móvil meñique" loading="lazy" class="slider-image active" />
-            <img src="images/pinky-3.jpg" alt="Soporte de móvil meñique 2" loading="lazy" class="slider-image " />
-            <img src="images/pinky-1.jpg" alt="Soporte de móvil meñique 3" loading="lazy" class="slider-image" />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Soporte para móvil meñique</h4>
-            <p>Sujeta el movil comodamente o usalo de soporte.</p>
-            <div class="meta">
-              <span>⏱ &lt;1 h</span>
-              <span class="price">desde 2 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Compatible:</strong> Cualquier móvil</li>
-            <li><strong>Multicolor:</strong> No</li>
-            <li><strong>Notas:</strong> Cuida tu meñique y gana un soporte de móvil</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 4 ============ -->
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/especiero-1.jpg" alt="Organizador de especias impreso en 3D con seis compartimentos visto al frente sobre una superficie clara" loading="lazy" class="slider-image active" />
-            <img src="images/especiero-2.jpg" alt="Organizador de especias impreso en 3D con seis compartimentos visto desde un ángulo lateral sobre un fondo neutro" loading="lazy" class="slider-image " />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Organizador de especias</h4>
-            <p>Mantén tus especias organizadas y a mano.</p>
-            <div class="meta">
-              <span>⏱ 4 h</span>
-              <span class="price">desde 10 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Capacidad:</strong> 6 compartimentos</li>
-            <li><strong>Multicolor:</strong> A elegir</li>
-            <li><strong>Notas:</strong> Segunda unidad al 50% de descuento</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 5 ============ -->
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/vaciabolsillos-3.jpg" alt="Vaciabolsillos impreso en 3D con compartimentos organizadores sobre una mesa clara" loading="lazy" class="slider-image active" />
-            <img src="images/vaciabolsillos-4.jpg" alt="Vaciabolsillos impreso en 3D presentado desde un lado con compartimentos visibles y un fondo neutro" loading="lazy" class="slider-image " />
-            <img src="images/vaciabolsillos-1.jpg" alt="Vaciabolsillos impreso en 3D presentado desde un lado con compartimentos visibles y un fondo neutro" loading="lazy" class="slider-image " />
-            <img src="images/vaciabolsillos-2.jpg" alt="Vaciabolsillos impreso en 3D presentado desde un lado con compartimentos visibles y un fondo neutro" loading="lazy" class="slider-image " />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Vaciabolsillos</h4>
-            <p>Ten un lugar para tus cosas diarias.</p>
-            <div class="meta">
-              <span>⏱ 7 h</span>
-              <span class="price">desde 7 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Tipo:</strong> Un fondo o doble fondo</li>
-            <li><strong>Multicolor:</strong> Depende del modelo</li>
-            <li><strong>Notas:</strong> Muchos más modelos a elegir</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 6 ============ -->
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/otros-2.jpg" alt="Vaciabolsillos impreso en 3D con compartimentos organizadores sobre una mesa clara" loading="lazy" class="slider-image active" />
-            <img src="images/otros-3.jpg" alt="Vaciabolsillos impreso en 3D presentado desde un lado con compartimentos visibles y un fondo neutro" loading="lazy" class="slider-image " />
-            <img src="images/otros-1.jpg" alt="Vaciabolsillos impreso en 3D presentado desde un lado con compartimentos visibles y un fondo neutro" loading="lazy" class="slider-image " />
-            <img src="images/otros-4.jpg" alt="Vaciabolsillos impreso en 3D presentado desde un lado con compartimentos visibles y un fondo neutro" loading="lazy" class="slider-image " />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Otros</h4>
-            <p>Algunos objetos útiles más.</p>
-            <div class="meta">
-              <span>⏱ ? h</span>
-              <span class="price">desde ? €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Tip 1:</strong> ¿Se te ocurre algo más?</li>
-            <li><strong>Tip 2:</strong> Reduce el desorden en segundos.</li>
-            <li><strong>Tip 3:</strong> Útil en casa, oficina o donde quieras</li>
-            <li><strong>Más modelos:</strong> https://makerworld.com/es/search/models?keyword=utilidad</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-
-<!--   ============ DECORACION ============ -->
-    <h3 class="cat">Decoración</h3>
-    <div class="grid">
-
-<!--   ============ PRODUCTO 1 ============ -->
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/lobo.jpg" alt="Busto de lobo impreso en 3D con formas suaves y facetas geométricas, iluminado contra un fondo oscuro con un tono elegante" loading="lazy" class="slider-image active" />
-            <img src="images/gato.JPG" alt="Figura de gato impresa en 3D vista de lado, con detalles suaves de rostro y cuerpo sobre un fondo neutro" loading="lazy" class="slider-image " />
-            <img src="images/tortuga.jpg" alt="Figura de tortuga impresa en 3D vista de lado, con detalles suaves de rostro y cuerpo sobre un fondo neutro" loading="lazy" class="slider-image " />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Estatuas varias</h4>
-            <p>Diferentes estatuas de animales u objetos</p>
-            <div class="meta">
-              <span>⏱ 2 h</span>
-              <span class="price">desde 5 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Color:</strong> A elegir</li>
-            <li><strong>Multicolor:</strong> No</li>
-            <li><strong>Notas:</strong> Se puede cambiar el tamaño</li>
-            <li><strong>Más modelos:</strong> https://makerworld.com/es/search/models?keyword=decoracion%20estatuas</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 3 ============ -->
-
-      <article class="card">
-        <button class="card-toggle" aria-expanded="false">
-          <div class="card-img"><img src="images/bonsai.jpg" alt="Figura impresa en 3D con forma de árbol bonsai en negro y rojo dentro de una maceta roja sobre un fondo cálido" loading="lazy" /></div>
-          <div class="card-body">
-            <h4>Bonsai Decorativo</h4>
-            <p>Se puede cambiar el color del árbol</p>
-            <div class="meta">
-              <span>⏱ 10 h</span>
-              <span class="price">desde 15 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Personalizable:</strong> Hojas, tronco y macetero</li>
-            <li><strong>Multicolor:</strong> No, son piezas unidas</li>
-            <li><strong>Notas:</strong> Mi pieza favorita de decoración</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 3 ============ -->
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/macetero-1.jpg" alt="Maceteros modernos para plantas de hogar" loading="lazy" class="slider-image active" />
-            <img src="images/macetero-2.jpg" alt="Maceteros modernos para plantas de hogar" loading="lazy" class="slider-image " />
-            <img src="images/macetero-3.jpg" alt="Maceteros modernos para plantas de hogar" loading="lazy" class="slider-image " />
-            <img src="images/macetero-4.jpg" alt="Maceteros modernos para plantas de hogar" loading="lazy" class="slider-image " />
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Maceteros</h4>
-            <p>Diferentes diseños y colores disponibles.</p>
-            <div class="meta">
-              <span>⏱ 5 h</span>
-              <span class="price">desde 10 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Tamaño:</strong> Variable</li>
-            <li><strong>Multicolor:</strong> No en la mayoría</li>
-            <li><strong>Notas:</strong> No es recomendable que se usen en exteriores o con agua directamente en ellos.</li>
-            <li><strong>Más modelos:</strong> https://makerworld.com/es/search/models?keyword=maceteros</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 4 ============ -->
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/madrid.jpg" alt="Organizador de especias impreso en 3D con seis compartimentos visto al frente sobre una superficie clara" loading="lazy" class="slider-image active" />
-            <img src="images/sevilla.jpg" alt="Organizador de especias impreso en 3D con seis compartimentos visto desde un ángulo lateral sobre un fondo neutro" loading="lazy" class="slider-image " />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Escudos de equipos</h4>
-            <p>Ten a tu equipo en casa.</p>
-            <div class="meta">
-              <span>⏱ 4 h</span>
-              <span class="price">desde 8 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Tamaño:</strong> 17 cm x 17 cm aprox</li>
-            <li><strong>Multicolor:</strong> Si</li>
-            <li><strong>Notas:</strong> Dependen de mi disponibilidad de filamentos</li>
-          </ul>
-        </div>
-      </article>
-
-    </div>
-
-<!--   ============ ACCESORIOS Y PERSONALIZACIÓN ============ -->
-
-    <h3 class="cat">Accesorios y personalización</h3>
-    <div class="grid">
-
-<!--   ============ PRODUCTO 1 ============ -->      
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/llavero-1.JPG" alt="Llavero personalizado" loading="lazy" class="slider-image active" />
-            <img src="images/llavero-2.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-3.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-4.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-5.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-6.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-7.jpeg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>LLaveros</h4>
-            <p>Hay un montón de diseños disponibles.</p>
-            <div class="meta">
-              <span>⏱ 1 h</span>
-              <span class="price">desde 1 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Contenido:</strong> Tengo que mirar anillas y cadenas</li>
-            <li><strong>Multicolor:</strong> Si, algunos</li>
-            <li><strong>Notas:</strong> Se crean en masa</li>
-            <li><strong>Más modelos:</strong> https://makerworld.com/es/search/models?keyword=llaveros</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 2 ============ -->      
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/posavasos-1.jpg" alt="Posa vasos personalizado" loading="lazy" class="slider-image active" />
-            <img src="images/posavasos-2.jpg" alt="Posa vasos personalizado" loading="lazy" class="slider-image " />
-            <img src="images/posavasos-3.jpg" alt="Posa vasos personalizado" loading="lazy" class="slider-image " />
-            <img src="images/posavasos-4.jpg" alt="Posa vasos personalizado" loading="lazy" class="slider-image " />
-            <img src="images/posavasos-5.jpg" alt="Posa vasos personalizado" loading="lazy" class="slider-image " />
-            <img src="images/posavasos-7.jpg" alt="Posa vasos personalizado" loading="lazy" class="slider-image " />
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>Posa vasos</h4>
-            <p>Hay un montón de diseños disponibles.</p>
-            <div class="meta">
-              <span>⏱ 1 h</span>
-              <span class="price">desde 2 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>tamaño:</strong> 10cm de diametro</li>
-            <li><strong>Multicolor:</strong> Si, algunos</li>
-            <li><strong>Notas:</strong> Si no es multicolor, será con relieve</li>
-            <li><strong>Más modelos:</strong> https://makerworld.com/es/search/models?keyword=posa%20vasos</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 3 ============ -->      
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/llavero-1.JPG" alt="Llavero personalizado" loading="lazy" class="slider-image active" />
-            <img src="images/llavero-2.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-3.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-4.JPG" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-5.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-6.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-7.jpeg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>EN CONSTRUCCION</h4>
-            <p>EN CONSTRUCCION.</p>
-            <div class="meta">
-              <span>⏱ 1 h</span>
-              <span class="price">desde 1 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Contenido:</strong> Tengo que mirar anillas y cadenas</li>
-            <li><strong>Multicolor:</strong> Si, algunos</li>
-            <li><strong>Notas:</strong> Se crean en masa</li>
-            <li><strong>Más modelos:</strong> https://makerworld.com/es/search/models?keyword=llaveros</li>
-          </ul>
-        </div>
-      </article>
-
-<!--   ============ PRODUCTO 4 ============ -->      
-
-      <article class="card">
-        <div class="card-img slider" data-slider>
-          <button class="slider-arrow left" type="button" data-prev aria-label="Foto anterior">&lsaquo;</button>
-
-            <img src="images/llavero-1.JPG" alt="Llavero personalizado" loading="lazy" class="slider-image active" />
-            <img src="images/llavero-2.JPG" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-3.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-4.JPG" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-5.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-6.jpg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-            <img src="images/llavero-7.jpeg" alt="Llavero personalizado" loading="lazy" class="slider-image " />
-
-            <button class="slider-arrow right" type="button" data-next aria-label="Foto siguiente">&rsaquo;</button>
-        </div>
-        <button class="card-toggle" aria-expanded="false" type="button">
-          <div class="card-body">
-            <h4>EN CONSTRUCCION</h4>
-            <p>EN CONSTRUCCION.</p>
-            <div class="meta">
-              <span>⏱ 1 h</span>
-              <span class="price">desde 1 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Contenido:</strong> Tengo que mirar anillas y cadenas</li>
-            <li><strong>Multicolor:</strong> Si, algunos</li>
-            <li><strong>Notas:</strong> Se crean en masa</li>
-            <li><strong>Más modelos:</strong> https://makerworld.com/es/search/models?keyword=llaveros</li>
-          </ul>
-        </div>
-      </article>
-   
-
-    </div>    
-
-    <h3 class="cat">Gadgets y entretenimiento</h3>
-    <div class="grid">
-
-      <article class="card">
-        <button class="card-toggle" aria-expanded="false">
-          <div class="card-img"><img src="images/llavero.jpg" alt="Llavero personalizado" loading="lazy" /></div>
-          <div class="card-body">
-            <h4>EN CONSTRUCCION</h4>
-            <p>EN CONSTRUCCION.</p>
-            <div class="meta">
-              <span>⏱ 1 h</span>
-              <span class="price">desde 3 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Personalizable:</strong> texto o forma</li>
-            <li><strong>Multicolor:</strong> sí, ideal para texto</li>
-            <li><strong>Notas:</strong> regalo perfecto y barato</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-
-    <h3 class="cat">Anime · Gaming · Fantasía</h3>
-    <div class="grid">
-
-      <article class="card">
-        <button class="card-toggle" aria-expanded="false">
-          <div class="card-img"><img src="images/llavero.jpg" alt="Llavero personalizado" loading="lazy" /></div>
-          <div class="card-body">
-            <h4>EN CONSTRUCCION</h4>
-            <p>EN CONSTRUCCION.</p>
-            <div class="meta">
-              <span>⏱ 1 h</span>
-              <span class="price">desde 3 €</span>
-            </div>
-            <span class="more-hint">Toca para más detalles ▾</span>
-          </div>
-        </button>
-        <div class="card-extra" hidden>
-          <ul>
-            <li><strong>Personalizable:</strong> texto o forma</li>
-            <li><strong>Multicolor:</strong> sí, ideal para texto</li>
-            <li><strong>Notas:</strong> regalo perfecto y barato</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-
-
-  </main>
-
-  <!-- ============ COLORES DISPONIBLES ============
-       Para editar: cambiar data-color, el nombre y la clase de estado
-       Estados: status-ok | status-low | status-out
-  -->
-  <section class="section" id="colores">
+  <!-- ============ DOS OPCIONES PRINCIPALES ============ -->
+  <section class="section landing-options">
     <div class="section-head">
-      <h2>Colores disponibles</h2>
-      <p>Stock actual de filamentos. Si necesitas un color que no tengo, escribeme :)</p>
+      <h2>Catálogo permanente</h2>
+      <p>Elige productos listos para encargo o descubre drops especiales.</p>
     </div>
 
-    <div class="colors">
-      <div class="color">
-        <span class="swatch" style="--c:#d1d3d5;"></span>
-        <div class="color-info">
-          <strong>Gris claro</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
+    <div class="options-grid">
+      <!-- Catálogo principal -->
+      <div class="option-card option-main">
+        <div class="option-icon" aria-hidden="true">📦</div>
+        <h3>Catálogo</h3>
+        <p>Modelos permanentes y listos para pedir: decoración, accesorios, útiles y regalos imprimibles.</p>
+        <ul class="option-features">
+          <li>✓ Siempre disponible</li>
+          <li>✓ Variedad de tamaños y colores</li>
+          <li>✓ Pedido rápido sin esperas largas</li>
+        </ul>
+        <a class="btn btn-primary" href="catalogo.html">Ver catálogo</a>
       </div>
-      <div class="color">
-        <span class="swatch" style="--c:#bb3d43;"></span>
-        <div class="color-info">
-          <strong>Rojo Mate</strong>
-          <span class="status status-low">Queda poco</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#ffffff;"></span>
-        <div class="color-info">
-          <strong>Blanco</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#000000; border-color:#333"></span>
-        <div class="color-info">
-          <strong>Negro</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#1f6feb;"></span>
-        <div class="color-info">
-          <strong>Azul</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#22c55e;"></span>
-        <div class="color-info">
-          <strong>Verde</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#f5c518;"></span>
-        <div class="color-info">
-          <strong>Amarillo</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#e8afcf;"></span>
-        <div class="color-info">
-          <strong>Rosa Sakura</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#5e43b7;"></span>
-        <div class="color-info">
-          <strong>Morado</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#65b6ec;"></span>
-        <div class="color-info">
-          <strong>Azul Brillo</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#fa7900;"></span>
-        <div class="color-info">
-          <strong>Naranja</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#40E0D0;"></span>
-        <div class="color-info">
-          <strong>Turquesa</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-      <div class="color">
-        <span class="swatch" style="--c:#000000;"></span>
-        <div class="color-info">
-          <strong>Negro PETG</strong>
-          <span class="status status-ok">Disponible</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ============ EXPLICACION FILAMENTOS ============ -->
-<section class="section filament-guide">
-  <div class="section-head filament-head">
-    <div>
-      <h2>Guía de filamentos</h2>
-      <p>Qué materiales uso y qué conviene saber antes de pedir.</p>
-    </div>
 
-    <button class="filament-toggle" type="button" aria-expanded="false">
-      Ver guía ▼
-    </button>
-  </div>
-
-  <div class="filament-grid" hidden>
-    <article class="filament-card">
-      <h3>PLA</h3>
-      <p><strong>Es mi material principal.</strong> Ideal para decoración, escritorio, regalos y la mayoría de piezas de uso interior.</p>
-      <ul>
-        <li>Fácil de imprimir y buen acabado</li>
-        <li>Puede ser básico, mate o con acabados especiales</li>
-        <li>También puede existir glow, translúcido o variantes decorativas</li>
-        <li>No aguanta bien calor alto ni esfuerzos fuertes ni agua</li>
-      </ul>
-    </article>
-
-    <article class="filament-card">
-      <h3>PETG</h3>
-      <p>Más resistente que el PLA y mejor para piezas funcionales o de más uso.</p>
-      <ul>
-        <li>Más resistente y algo más flexible</li>
-        <li>Mejor para piezas prácticas</li>
-        <li>Buen equilibrio entre resistencia y facilidad</li>
-        <li>No dispongo de mucho :)</li>
-      </ul>
-    </article>
-
-    <article class="filament-card">
-      <h3>ABS</h3>
-      <p>Material más técnico, pensado para usos más exigentes.</p>
-      <ul>
-        <li>Más resistente al calor que PLA</li>
-        <li>Más complejo de imprimir</li>
-        <li>No es mi material habitual</li>
-        <li>Solo bajo consulta</li>
-      </ul>
-    </article>
-
-    <article class="filament-card">
-      <h3>TPU</h3>
-      <p>Material flexible, útil para piezas blandas o con cierta elasticidad.</p>
-      <ul>
-        <li>Flexible</li>
-        <li>Interesante para usos concretos</li>
-        <li>No es el material estándar</li>
-        <li>Bajo consulta / pruebas</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-  <!-- ============ ENCARGOS PERSONALIZADOS ============ -->
-  <section class="custom section">
-    <div class="custom-inner">
-      <span class="badge">Encargos a medida</span>
-      <h2>¿Tienes una idea propia?</h2>
-      <p>
-        Puedo imprimir piezas concretas, regalos, accesorios, decoración o lo que se te ocurra.
-        Mándame una foto, un boceto o una referencia y vemos cómo hacerlo. (No soy diseñador 3D)
-      </p>
-      <a class="btn btn-primary big" href="https://wa.me/34636653986?text=Hola,%20quiero%20un%20encargo%20personalizado" target="_blank" rel="noopener">
-        Háblame por WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ QUIÉN SOY ============ -->
-  <section class="section about">
-    <div class="section-head">
-      <h2>Quién está detrás</h2>
-      <p>Pequeño proyecto, hecho desde una habitación.</p>
-    </div>
-    <div class="about-grid">
-      <div class="about-media">
-        <video controls>
-          <source src="videos/roomtour.mp4" type="video/mp4">
-          Tu navegador no soporta vídeo.
-        </video>
-      </div>
-      <div class="about-text">
-        <p>
-          Soy estudiante en la resi y monté un mini setup de impresión 3D en la habitación.
-          Empezó como hobby y ahora ayudo a quien quiera un diseño sin tener que pedirlo online ni esperar días.
-        </p>
-        <p>
-          Mi actividad principal es el Hacking Ético y la Ciberseguridad :)
-        </p>
-        <a class="link-inline" href="https://www.linkedin.com/in/8angel/" target="_blank" rel="noopener">Ver LinkedIn →</a>
+      <!-- Drop secundario -->
+      <div class="option-card option-secondary">
+        <div class="badge-drop" style="margin-bottom: 12px;">● Activo ahora</div>
+        <div class="option-icon" aria-hidden="true">⭐</div>
+        <h3>Drops exclusivos</h3>
+        <p>Colecciones limitadas y colaboraciones especiales con disponibilidad temporal.</p>
+        <ul class="option-features">
+          <li>✓ Ediciones especiales</li>
+          <li>✓ Piezas únicas por tiempo corto</li>
+          <li>✓ Disponible sólo mientras dure el drop</li>
+        </ul>
+        <a class="btn btn-drop" href="drops.html">Ver drop</a>
       </div>
     </div>
   </section>
 
+  <!-- ============ CTA WHATSAPP ============ -->
   <!-- ============ CONTACTO ============ -->
-  <section class="section contact" id="contacto">
+  <section class="section contact hide-mobile" id="contacto">
     <h2>Pídelo por WhatsApp</h2>
-    <p>Sin compromiso.</p>
-    <a class="btn btn-primary big" href="https://wa.me/34636653986?text=Holaa%20" target="_blank" rel="noopener">
+    <p>Sin compromiso. Catálogo, drops o encargo personalizado.</p>
+    <a class="btn btn-drop big" href="https://wa.me/34636653986?text=Holaa%20" target="_blank" rel="noopener">
       Abrir WhatsApp
     </a>
   </section>
@@ -828,7 +118,7 @@
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div>SSHINOBI™ · Impresión 3D</div>
-    <div class="muted">Consulta disponibilidad y precios por WhatsApp</div>
+    <div class="muted"><a href="catalogo.html">Catálogo</a> • <a href="drops.html">Drops</a> • Consulta disponibilidad por WhatsApp</div>
   </footer>
 
   <!-- ============ FAB WHATSAPP ============ -->
