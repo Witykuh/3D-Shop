@@ -282,6 +282,7 @@ body { font-size: 0.95rem; }
 }
 .cta-row .btn:first-child {
   order: 1;
+  border: 1px solid rgba(220, 38, 38, 0.4);
 }
 .cta-row .btn:last-child {
   order: 2;
