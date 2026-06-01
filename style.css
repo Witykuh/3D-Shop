@@ -261,7 +261,6 @@ body { font-size: 0.95rem; }
   height: 100%;
   object-fit: cover;
   border-radius: 16px;
-  transform: rotate(-90deg);
   transform-origin: center center;
   scale: 1.15;
 }
