@@ -255,6 +255,8 @@ body { font-size: 0.95rem; }
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  transform: rotate(-90deg);
+  overflow: visible;
 }
 
 .badge {
