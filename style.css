@@ -302,19 +302,19 @@ body { font-size: 0.95rem; }
 }
 .cta-row .btn:last-child {
   order: 2;
-  background: var(--bg-elev);
-  color: var(--text);
-  border-color: var(--border);
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
   font-size: 14px;
   padding: 12px 20px;
   min-height: 44px;
   transition: background .2s ease, border-color .2s ease;
 }
 .cta-row .btn:last-child:hover {
-  background: var(--red);
-  color: var(--white);
-  border-color: var(--red);
+  background: var(--red-hover);
+  border-color: var(--red-hover);
 }
+
 .mini {
   list-style: none;
   display: flex;
