@@ -1035,6 +1035,32 @@ body { font-size: 0.95rem; }
 .filament-card li { color: var(--muted); font-size: 14px; padding-left: 14px; position: relative; }
 .filament-card li::before { content: "•"; color: var(--red); position: absolute; left: 0; top: 0; }
 
+/* ------------------ Touch interaction improvements ------------------ */
+/* Ensure scrollable containers allow vertical panning and images don't block it */
+html, body, .nav-links.mobile, .past-drops-row, .grid, .card, .card-img, .slider {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+/* Allow images to participate in vertical scrolling; disable unwanted image drag/callout */
+img {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+/* Decorative images that should not capture pointer events can use .no-pointer */
+img.no-pointer { pointer-events: none; }
+
+/* Preserve interactivity for linked or explicitly interactive images */
+a img,
+img.interactive { pointer-events: auto; }
+
+/* Slider images have their own pointer rules already; keep them intact */
+/* -------------------------------------------------------------------- */
+
 @media (min-width: 700px) {
   .filament-grid { grid-template-columns: repeat(2, 1fr); }
   .filament-head { flex-direction: row; justify-content: space-between; align-items: end; }

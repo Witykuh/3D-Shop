@@ -97,29 +97,45 @@
         showImage(current);
       });
 
-      // Touch events for swipe
+      // Touch events for swipe — only prevent default when user intent is horizontal
+      let startY = 0;
+      let isHorizontal = false;
+
       slider.addEventListener("touchstart", (e) => {
         startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
         isDragging = true;
-      });
+        isHorizontal = false;
+      }, { passive: true });
 
       slider.addEventListener("touchmove", (e) => {
         if (!isDragging) return;
-        e.preventDefault();
-      });
+        const dx = e.touches[0].clientX - startX;
+        const dy = e.touches[0].clientY - startY;
+
+        // If it's clearly a horizontal gesture, prevent default so slider captures it.
+        if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 6) {
+          isHorizontal = true;
+          // this listener is registered as non-passive below so preventDefault will work
+          e.preventDefault();
+        } else if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 6) {
+          // Vertical scroll detected — allow it to propagate
+          isHorizontal = false;
+          isDragging = false;
+        }
+      }, { passive: false });
 
       slider.addEventListener("touchend", (e) => {
         if (!isDragging) return;
         isDragging = false;
+        if (!isHorizontal) return; // if it wasn't horizontal, don't treat as swipe
         const endX = e.changedTouches[0].clientX;
         const diffX = startX - endX;
 
         if (Math.abs(diffX) > 50) { // Minimum swipe distance
           if (diffX > 0) {
-            // Swipe left - next image
             current = (current + 1) % images.length;
           } else {
-            // Swipe right - previous image
             current = (current - 1 + images.length) % images.length;
           }
           showImage(current);
