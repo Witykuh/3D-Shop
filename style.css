@@ -256,9 +256,9 @@ body { font-size: 0.95rem; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--red);
-  background: rgba(225, 29, 46, 0.10);
-  border: 1px solid rgba(225, 29, 46, 0.35);
+  color: var(--green);
+  background: rgba(46, 225, 139, 0.10);
+  border: 1px solid rgba(46, 225, 139, 0.35);
   padding: 6px 12px;
   border-radius: 999px;
   margin-bottom: 20px;
@@ -1048,7 +1048,6 @@ img {
   touch-action: pan-y;
   -webkit-touch-callout: none;
   -webkit-user-drag: none;
-  user-drag: none;
 }
 
 /* Decorative images that should not capture pointer events can use .no-pointer */
