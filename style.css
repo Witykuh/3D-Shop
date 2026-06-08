@@ -1096,6 +1096,11 @@ img.interactive { pointer-events: auto; }
   pointer-events: none;
   transition: opacity 0.25s ease;
 }
+
+video.slider-image {
+  object-fit: cover;
+}
+
 .slider-image.active { opacity: 1; pointer-events: auto; }
 .slider-arrow {
   position: absolute;

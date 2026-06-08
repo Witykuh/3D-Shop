@@ -82,6 +82,10 @@
       function showImage(index) {
         images.forEach((img, i) => {
           img.classList.toggle("active", i === index);
+          if (i === index && img.tagName === "VIDEO") {
+            img.currentTime = 0;
+            img.play();
+          }
         });
       }
 
