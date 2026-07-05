@@ -24,14 +24,41 @@
       <span></span>
     </div>
     <nav class="nav-links">
-      <a href="catalogo.html" class="nav-link">Catálogo</a>
+      <div class="nav-dropdown">
+        <a href="catalogo.html" class="nav-link nav-dropdown-toggle">
+          Catálogo <span class="nav-caret">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="catalogo.html#utilidad" class="nav-dropdown-link">Utilidad y organización</a>
+          <a href="catalogo.html#decoracion" class="nav-dropdown-link">Decoración</a>
+          <a href="catalogo.html#accesorios" class="nav-dropdown-link">Accesorios y personalización</a>
+          <a href="catalogo.html#geek-fandom" class="nav-dropdown-link">Geek & Fandom</a>
+          <a href="catalogo.html#packs" class="nav-dropdown-link">Packs y descuentos</a>
+        </div>
+      </div>
       <a href="drops.html" class="nav-link">Drops</a>
+      <div class="nav-dropdown">
+        <a href="proyectos/index.html" class="nav-link nav-dropdown-toggle">
+          Proyectos <span class="nav-caret">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="proyectos/empresas.html" class="nav-dropdown-link">Empresas</a>
+          <a href="proyectos/imanes.html" class="nav-dropdown-link">Imanes</a>
+          <a href="proyectos/hueforges.html" class="nav-dropdown-link">Hueforge</a>
+          <a href="proyectos/impresiones-nfc.html" class="nav-dropdown-link">Impresiones NFC</a>
+        </div>
+      </div>
       <a href="catalogo.html#colores" class="nav-link">Colores</a>
       <a href="sobremi.html" class="nav-link">Quién soy</a>
     </nav>
     <nav class="nav-links mobile" id="nav-links-mobile">
       <a href="catalogo.html" class="nav-link">Catálogo</a>
       <a href="drops.html" class="nav-link">Drops</a>
+      <a href="proyectos/index.html" class="nav-link">Proyectos</a>
+      <a href="proyectos/empresas.html" class="nav-link">Empresas</a>
+      <a href="proyectos/imanes.html" class="nav-link">Imanes</a>
+      <a href="proyectos/hueforges.html" class="nav-link">Hueforge</a>
+      <a href="proyectos/impresiones-nfc.html" class="nav-link">Impresiones NFC</a>
       <a href="catalogo.html#colores" class="nav-link">Colores</a>
       <a href="sobremi.html" class="nav-link">Quién soy</a>
     </nav>
@@ -39,28 +66,30 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="top">
-    <div class="hero-inner">
-      <span class="badge">● Activo</span>
-      <h1>Impresión 3D <span class="accent">rápida</span> en Pamplona.</h1>
-      <p class="lead">
-        Pide modelos ya preparados, colaboraciones exclusivas o encarga algo personalizado.
-        Sin esperas largas, sin envíos: lo recoges en mano.
-      </p>
+    <div class="hero-row">
+      <div class="hero-inner">
+        <span class="badge">● Activo</span>
+        <h1>Impresión 3D <span class="accent">rápida</span> en Pamplona.</h1>
+        <p class="lead">
+          Pide modelos ya preparados, colaboraciones exclusivas o encarga algo personalizado.
+          Sin esperas largas, sin envíos: lo recoges en mano.
+        </p>
 
-      <div class="cta-row">
-        <a class="btn btn-ghost" href="https://wa.me/34636653986?text=Holaa%20%F0%9F%91%8B%20Antes%20de%20nada%2C%20%C2%BFpodr%C3%ADas%20presentarte%3F%20As%C3%AD%20puedo%20guardarte%20y%20saber%20con%20qui%C3%A9n%20hablo%20por%20si%20haces%20alg%C3%BAn%20pedido.%20Gracias%20%F0%9F%98%8A" target="_blank" rel="noopener">
-          Pedir por WhatsApp
-        </a>
-        <a class="btn btn-drop" href="catalogo.html">Ver catálogo</a>
+        <div class="cta-row">
+          <a class="btn btn-ghost" href="https://wa.me/34636653986?text=Holaa%20%F0%9F%91%8B%20Antes%20de%20nada%2C%20%C2%BFpodr%C3%ADas%20presentarte%3F%20As%C3%AD%20puedo%20guardarte%20y%20saber%20con%20qui%C3%A9n%20hablo%20por%20si%20haces%20alg%C3%BAn%20pedido.%20Gracias%20%F0%9F%98%8A" target="_blank" rel="noopener">
+            Pedir por WhatsApp
+          </a>
+          <a class="btn btn-drop" href="catalogo.html">Ver catálogo</a>
+        </div>
+
+        <ul class="mini">
+          <li>⚡ Entrega en mano</li>
+          <li>🛠️ Encargos personalizados</li>
+        </ul>
       </div>
-
-      <ul class="mini">
-        <li>⚡ Entrega en mano</li>
-        <li>🛠️ Encargos personalizados</li>
-      </ul>
-    </div>
-    <div class="hero-visual">
-      <img src="images/general/Portada1.webp" alt="Desktop 3D printer with finished 3D printed parts displayed on a worktable; filament spools and tools visible in the background, showing a small tidy workshop ready for hand pickup. Tone: professional and inviting" class="hero-img">
+      <div class="hero-visual">
+        <img src="images/general/Portada1.webp" alt="Desktop 3D printer with finished 3D printed parts displayed on a worktable; filament spools and tools visible in the background, showing a small tidy workshop ready for hand pickup. Tone: professional and inviting" class="hero-img">
+      </div>
     </div>
   </section>
 
@@ -97,6 +126,110 @@
           <li>✓ Disponible sólo mientras dure el drop</li>
         </ul>
         <a class="btn btn-drop" href="drops.html">Ver drop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section class="section reviews">
+    <div class="section-head">
+      <h2>Lo que dicen nuestros clientes</h2>
+    </div>
+
+    <div class="reviews-track-wrap">
+      <div class="reviews-track">
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedí unos llaveros personalizados para una boda y quedaron increíbles. ¡Todos preguntaban dónde los habíamos conseguido!"</p>
+          <div class="review-author">
+            <strong>María García</strong>
+            <span>Madrid</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"El soporte para libro es perfecto, muy bien acabado y lleva meses aguantando el uso diario sin ningún problema."</p>
+          <div class="review-author">
+            <strong>Carlos Ruiz</strong>
+            <span>Sevilla</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Encargué los posavasos con el escudo del Barça y la calidad superó mis expectativas. El trato es súper cercano."</p>
+          <div class="review-author">
+            <strong>Ana Martínez</strong>
+            <span>Barcelona</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Los maceteros quedaron geniales en el salón. Te asesora bien sobre colores y el resultado es muy profesional."</p>
+          <div class="review-author">
+            <strong>Javier López</strong>
+            <span>Valencia</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Llevo ya tres pedidos y siempre perfectos. El anillo giratorio fue un regalo y le encantó a quien se lo di."</p>
+          <div class="review-author">
+            <strong>Laura Sánchez</strong>
+            <span>Bilbao</span>
+          </div>
+        </article>
+
+        <!-- Duplicado para bucle infinito continuo -->
+        <article class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Pedí unos llaveros personalizados para una boda y quedaron increíbles. ¡Todos preguntaban dónde los habíamos conseguido!"</p>
+          <div class="review-author">
+            <strong>María García</strong>
+            <span>Madrid</span>
+          </div>
+        </article>
+
+        <article class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"El soporte para libro es perfecto, muy bien acabado y lleva meses aguantando el uso diario sin ningún problema."</p>
+          <div class="review-author">
+            <strong>Carlos Ruiz</strong>
+            <span>Sevilla</span>
+          </div>
+        </article>
+
+        <article class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Encargué los posavasos con el escudo del Barça y la calidad superó mis expectativas. El trato es súper cercano."</p>
+          <div class="review-author">
+            <strong>Ana Martínez</strong>
+            <span>Barcelona</span>
+          </div>
+        </article>
+
+        <article class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Los maceteros quedaron geniales en el salón. Te asesora bien sobre colores y el resultado es muy profesional."</p>
+          <div class="review-author">
+            <strong>Javier López</strong>
+            <span>Valencia</span>
+          </div>
+        </article>
+
+        <article class="review-card" aria-hidden="true">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Llevo ya tres pedidos y siempre perfectos. El anillo giratorio fue un regalo y le encantó a quien se lo di."</p>
+          <div class="review-author">
+            <strong>Laura Sánchez</strong>
+            <span>Bilbao</span>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>

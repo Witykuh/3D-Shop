@@ -24,14 +24,41 @@
       <span></span>
     </div>
     <nav class="nav-links">
-      <a href="catalogo.html" class="nav-link active">Catálogo</a>
+      <div class="nav-dropdown">
+        <a href="catalogo.html" class="nav-link nav-dropdown-toggle active">
+          Catálogo <span class="nav-caret">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="#utilidad" class="nav-dropdown-link">Utilidad y organización</a>
+          <a href="#decoracion" class="nav-dropdown-link">Decoración</a>
+          <a href="#accesorios" class="nav-dropdown-link">Accesorios y personalización</a>
+          <a href="#geek-fandom" class="nav-dropdown-link">Geek & Fandom</a>
+          <a href="#packs" class="nav-dropdown-link">Packs y descuentos</a>
+        </div>
+      </div>
       <a href="drops.html" class="nav-link">Drops</a>
+      <div class="nav-dropdown">
+        <a href="proyectos/index.html" class="nav-link nav-dropdown-toggle">
+          Proyectos <span class="nav-caret">▾</span>
+        </a>
+        <div class="nav-dropdown-menu">
+          <a href="proyectos/empresas.html" class="nav-dropdown-link">Empresas</a>
+          <a href="proyectos/imanes.html" class="nav-dropdown-link">Imanes</a>
+          <a href="proyectos/hueforges.html" class="nav-dropdown-link">Hueforge</a>
+          <a href="proyectos/impresiones-nfc.html" class="nav-dropdown-link">Impresiones NFC</a>
+        </div>
+      </div>
       <a href="#colores" class="nav-link">Colores</a>
       <a href="sobremi.html" class="nav-link">Quién soy</a>
     </nav>
     <nav class="nav-links mobile" id="nav-links-mobile">
       <a href="catalogo.html" class="nav-link active">Catálogo</a>
       <a href="drops.html" class="nav-link">Drops</a>
+      <a href="proyectos/index.html" class="nav-link">Proyectos</a>
+      <a href="proyectos/empresas.html" class="nav-link">Empresas</a>
+      <a href="proyectos/imanes.html" class="nav-link">Imanes</a>
+      <a href="proyectos/hueforges.html" class="nav-link">Hueforge</a>
+      <a href="proyectos/impresiones-nfc.html" class="nav-link">Impresiones NFC</a>
       <a href="#colores" class="nav-link">Colores</a>
       <a href="sobremi.html" class="nav-link">Quién soy</a>
     </nav>
@@ -52,7 +79,7 @@
 
 <!--   ============ UTILIDAD Y ORGANIZACION ============ -->
 
-    <h3 class="cat">Utilidad y organización</h3>
+    <h3 class="cat" id="utilidad">Utilidad y organización</h3>
     <div class="grid">
 <!--   ============ PRODUCTO 1 SOPORTE PARA LIBRO ============ -->
       <article class="card">
@@ -206,7 +233,7 @@
     </div>
 
 <!--   ============ DECORACION ============ -->
-    <h3 class="cat">Decoración</h3>
+    <h3 class="cat" id="decoracion">Decoración</h3>
     <div class="grid">
 
 <!--   ============ PRODUCTO 1 ESCULTURAS ============ -->
@@ -370,7 +397,7 @@
 
 <!--   ============ ACCESORIOS Y PERSONALIZACIÓN ============ -->
 
-    <h3 class="cat">Accesorios y personalización</h3>
+    <h3 class="cat" id="accesorios">Accesorios y personalización</h3>
     <div class="grid">
 
 <!--   ============ PRODUCTO 1 LLAVEROS ============ -->      
@@ -521,7 +548,7 @@
 
     <!--   ============ GEEK & FANDOM ============ -->
 
-    <h3 class="cat">GEEK & FANDOM</h3>
+    <h3 class="cat" id="geek-fandom">GEEK & FANDOM</h3>
     <div class="grid">
 
 <!--   ============ PRODUCTO 1 HUEFORGE ============ -->      
@@ -586,7 +613,7 @@
 
 <!--   ============ PACKS Y DESCUENTOS ============ -->
   <section class="section packs">
-    <h3 class="cat">Packs y descuentos</h3>
+    <h3 class="cat" id="packs">Packs y descuentos</h3>
     <div class="grid">
       <!-- Pack 1 -->
       <article class="card card-pack">

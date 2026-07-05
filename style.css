@@ -214,6 +214,52 @@ body { font-size: 0.95rem; }
   background: rgba(225, 29, 46, 0.08);
 }
 
+/* Dropdown "Proyectos" — solo desktop, el mobile usa enlaces planos */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-caret {
+  font-size: 9px;
+  transition: transform .2s ease;
+}
+.nav-dropdown:hover .nav-caret { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  position: absolute;
+  /* top: 100% (sin hueco) para que el ratón no "pierda" el hover
+     al bajar del enlace al menú — con gap, esa franja no pertenece
+     a ningún elemento y el :hover se cancela a mitad de camino. */
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 8px 8px;
+  box-shadow: var(--shadow);
+  z-index: 210;
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: flex;
+}
+.nav-dropdown-link {
+  display: block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 9px 12px;
+  border-radius: 8px;
+  transition: all .2s;
+}
+.nav-dropdown-link:hover { color: var(--text); background: rgba(225, 29, 46, 0.1); }
+.nav-dropdown-link.active { color: var(--text); background: rgba(225, 29, 46, 0.1); }
+
 /* ---------- HERO ---------- */
 .hero {
   position: relative;
@@ -264,6 +310,15 @@ body { font-size: 0.95rem; }
   border-radius: 16px;
   transform-origin: center center;
   /*scale: 1;*/
+}
+
+/* Contenedor compartido de texto+imagen del hero del index, con el
+   mismo max-width/padding lateral que el resto de secciones — sin él,
+   hero-inner (con max-width propio) y hero-visual (sin tope) no crecen
+   igual en pantallas anchas y la imagen queda pegada al borde. */
+.hero-row {
+  max-width: var(--maxw);
+  margin: 0 auto;
 }
 
 .badge {
@@ -357,6 +412,24 @@ body { font-size: 0.95rem; }
     margin: 40px 20px 40px 0;
     padding: 0;
   }
+  /* El index mete hero-inner + hero-visual dentro de .hero-row: aquí
+     es donde realmente viven el ancho máximo y el padding lateral,
+     así que dentro de ese wrapper anulamos el propio de cada columna. */
+  .hero-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  .hero-row .hero-inner {
+    max-width: none;
+    margin: 0;
+    padding: 64px 0;
+  }
+  .hero-row .hero-visual {
+    margin: 40px 0;
+  }
   .hero-placeholder {
     margin: 0;
     padding: 60px 40px;
@@ -410,6 +483,9 @@ body { font-size: 0.95rem; }
 }
 
 .cat {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
   max-width: var(--maxw);
   margin: 36px auto 16px;
   padding: 0 20px 0 2.5rem;
@@ -425,6 +501,13 @@ body { font-size: 0.95rem; }
   position: absolute;
   left: 16px; top: 2px; bottom: 2px;
   width: 2px;
+  background: var(--red);
+  border-radius: 2px;
+}
+.cat::after {
+  content: "";
+  flex: 1;
+  height: 2px;
   background: var(--red);
   border-radius: 2px;
 }
@@ -515,10 +598,12 @@ body { font-size: 0.95rem; }
   padding: 0 16px;
 }
 .card {
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+  text-decoration: none;
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 .card:hover {
@@ -544,6 +629,17 @@ body { font-size: 0.95rem; }
   transition: transform .5s ease;
 }
 .card:hover .card-img img { transform: scale(1.06); }
+
+/* Placeholder visual para categorías sin foto real todavía */
+.card-img.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  background: radial-gradient(circle at 30% 20%, rgba(225, 29, 46, 0.18), transparent 60%), var(--bg-elev);
+  transition: transform .5s ease;
+}
+.card:hover .card-img.placeholder { transform: scale(1.04); }
 
 .card-body {
   padding: 16px;
@@ -1017,6 +1113,7 @@ body { font-size: 0.95rem; }
   .colors { grid-template-columns: repeat(6, 1fr); }
   .grid { grid-template-columns: repeat(3, 1fr); }
   .hero-inner { padding: 60px 20px 90px; }
+  .hero-row .hero-inner { padding: 60px 0 90px; }
   .about-grid { grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; }
 }
 
@@ -1137,7 +1234,13 @@ video.slider-image {
 @media (min-width: 768px) {
   .hero-page {
     min-height: auto !important;
-    padding: 48px 0 !important;
+    padding: 64px 0 !important;
+  }
+  /* Anula el padding vertical de .hero-inner (pensado para el hero
+     de dos columnas del index) — aquí el propio .hero-page ya pone
+     el espacio vertical, así que el interior solo necesita el lateral. */
+  .hero-page .hero-inner {
+    padding: 0 20px;
   }
 }
 
